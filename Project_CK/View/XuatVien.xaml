@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="Project_CK.View.XuatVien"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Project_CK.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="820"
+             Style="{StaticResource Page_Style}"
+             >
+    <Grid>
+        <Border Background="#FFF"
+                CornerRadius="0,20,20,0" Loaded="Window_Loaded"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,269,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
+
+        <Grid Background="#FFF" Margin="10,0,10,0">
+
+            <GroupBox FontWeight="SemiBold" Header="Thông tin cơ bản" Margin="10,272,400,207"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="36,321,0,0" TextWrapping="Wrap" Text="Tên BN :" VerticalAlignment="Top"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="36,366,0,0" TextWrapping="Wrap" Text="Chuẩn Đoán :" VerticalAlignment="Top"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="36,447,0,0" TextWrapping="Wrap" Text="Số ĐT :" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtTenXV" HorizontalAlignment="Left" Margin="135,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" RenderTransformOrigin="-0.898,0.557"/>
+            <TextBox x:Name="txtGTXV" HorizontalAlignment="Left" Margin="135,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="36,406,0,0" TextWrapping="Wrap" Text="Giới Tính :" VerticalAlignment="Top" RenderTransformOrigin="1.552,0.207"/>
+            <TextBox x:Name="txtSDTXV" HorizontalAlignment="Left" Margin="135,438,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="300,30,0,0" 
+       TextWrapping="Wrap" Text="Hóa Đơn Viện Phí" 
+       VerticalAlignment="Top"
+       FontSize="30"
+       FontWeight="SemiBold"
+       />
+            <GroupBox FontWeight="SemiBold" Header="Bệnh Nhân Xuất Viện" Margin="10,138,400,482"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="36,181,0,0" TextWrapping="Wrap" Text="Mã BN Xuất Viện :" VerticalAlignment="Top"/>
+            <ComboBox x:Name="cbbXVien" HorizontalAlignment="Left" Margin="184,181,0,0" VerticalAlignment="Top" Width="158" SelectionChanged="cbbXVien_SelectionChanged"/>
+            <TextBox x:Name="txtChuanDoanXV" HorizontalAlignment="Left" Margin="135,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+            <GroupBox FontWeight="SemiBold" Header="Chi Phí Nằm Viện" Margin="469,138,10,207"/>
+            <TextBox x:Name="txtTienKham" HorizontalAlignment="Left" Margin="630,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="481,197,0,0" TextWrapping="Wrap" Text="Tiền Khám Bệnh :" VerticalAlignment="Top"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="481,318,0,0" TextWrapping="Wrap" Text="Tiền Thuốc :" VerticalAlignment="Top"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="481,258,0,0" TextWrapping="Wrap" Text="TIền Phòng :" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtTienPhong" HorizontalAlignment="Left" Margin="630,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="481,381,0,0" TextWrapping="Wrap" Text="Tổng Chi Phí (VNĐ) :" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtTienThuoc" HorizontalAlignment="Left" Margin="630,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtTongChiPhi" HorizontalAlignment="Left" Margin="630,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="btnXuatVien" Content="Thanh Toán" HorizontalAlignment="Left" Margin="582,438,0,0" VerticalAlignment="Top" Style="{StaticResource button_CK}" Click="btnXuatVien_Click" Width="94"/>
+            <GroupBox FontWeight="SemiBold" Header="Chú Thích" Margin="0,542,0,10" HorizontalAlignment="Center" Width="780"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="63,576,0,0" TextWrapping="Wrap" Text="- Tổng chi phí = Tiền khám bệnh + Tiền Phòng + Tiền Thuốc - BHYT" VerticalAlignment="Top"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="63,642,0,0" TextWrapping="Wrap" Text="- Tiền phòng Vip: 500k - Phòng thường: 200K" VerticalAlignment="Top"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="63,606,0,0" TextWrapping="Wrap" Text="- Tiền khám bệnh: 500k" VerticalAlignment="Top"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="63,675,0,0" TextWrapping="Wrap" Text="- BHYT giảm 50% tổng chi phí" VerticalAlignment="Top"/>
+            <Rectangle HorizontalAlignment="Left" Height="140" Margin="289,325,0,0" Stroke="Black" VerticalAlignment="Top" Width="120"/>
+            <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="324,470,0,0" TextWrapping="Wrap" Text="Ảnh BN" VerticalAlignment="Top"/>
+            <Image Stretch="UniformToFill" x:Name="ImgBN" HorizontalAlignment="Left" Height="140" Margin="289,326,0,0" VerticalAlignment="Top" Width="120"/>
+
+
+        </Grid>
+
+
+
+
+
+
+
+    </Grid>
+</UserControl>

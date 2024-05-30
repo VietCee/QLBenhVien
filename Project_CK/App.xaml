@@ -1,0 +1,20 @@
+﻿<Application x:Class="Project_CK.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Project_CK"
+             StartupUri="LogIn/SignIn.xaml">
+    <!--LogIn/SignIn.xaml-->
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style/LogIn.xaml" />
+                <ResourceDictionary Source="Style/Button.xaml"/>
+                <ResourceDictionary Source="Style/TextMenu.xaml"/>
+                <ResourceDictionary Source="Style/DataGridStyle.xaml"/>
+                <ResourceDictionary Source="Utilities/DataTemplate.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

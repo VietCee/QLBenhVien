@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="Project_CK.View.BacSi"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:local="clr-namespace:Project_CK.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="830" Background="Transparent"
+             Style="{DynamicResource Page_Style}">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border CornerRadius="0,20,0,0" Background="#fff">
+                <Grid Grid.Row="0">
+                    <TextBlock Text="QUẢN LÝ BÁC SĨ"
+                   FontSize="25"
+                   FontWeight="SemiBold"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+                </Grid>
+            </Border>
+
+            <Grid Grid.Row="1">
+
+                <Grid Background="#fff" Loaded="Window_Loaded">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"/>
+                        <RowDefinition Height="300*"/>
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="Thông tin bác sĩ" Margin="10,28,230,22" FontWeight="SemiBold">
+                    </GroupBox>
+                    <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="40,73,0,0" TextWrapping="Wrap" Text="Mã Bác Sĩ :" VerticalAlignment="Top"/>
+                    <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="40,106,0,0" TextWrapping="Wrap" Text="Tên Bác Sĩ :" VerticalAlignment="Top"/>
+                    <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="40,245,0,0" TextWrapping="Wrap" Text="Kinh Nghiệm :" VerticalAlignment="Top"/>
+                    <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="40,209,0,0" TextWrapping="Wrap" Text="Chuyên Khoa :" VerticalAlignment="Top"/>
+                    <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="40,138,0,0" TextWrapping="Wrap" Text="Giới Tính :" VerticalAlignment="Top"/>
+                    <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="40,172,0,0" TextWrapping="Wrap" Text="Số Điện Thoại :" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtMaBS" HorizontalAlignment="Left" Margin="151,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+                    <TextBox x:Name="txtKinhNghiem" HorizontalAlignment="Left" Margin="151,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+                    <TextBox x:Name="txtTenBS" HorizontalAlignment="Left" Margin="151,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+                    <TextBox x:Name="txtSDTBS" HorizontalAlignment="Left" Margin="151,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+                    <ComboBox FontWeight="SemiBold" x:Name="cbbKhoa" HorizontalAlignment="Left" Margin="151,205,0,0" VerticalAlignment="Top" Width="130"/>
+                    <ComboBox FontWeight="SemiBold" x:Name="cbbGTinhBS" HorizontalAlignment="Left" Margin="151,135,0,0" VerticalAlignment="Top" Width="130"/>
+                    <Button x:Name="btnThem" Content="Thêm" HorizontalAlignment="Left" Margin="483,73,0,0" VerticalAlignment="Top" Click="btnThem_Click" Style="{StaticResource button_CK}"/>
+                    <Button x:Name="btnSua" Content="Sửa" HorizontalAlignment="Left" Margin="483,126,0,0" VerticalAlignment="Top" Style="{StaticResource button_CK}" Click="btnSua_Click"/>
+                    <Button x:Name="btnXoa" Content="Xóa" HorizontalAlignment="Left" Margin="483,194,0,0" VerticalAlignment="Top" Style="{StaticResource button_CK}" Click="btnXoa_Click"/>
+                    <Image x:Name="imgBS" Stretch="UniformToFill" HorizontalAlignment="Left" Height="140" Margin="326,77,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="btnTaiAnhBS" Content="Tải Ảnh Lên" HorizontalAlignment="Left" Margin="338,237,0,0" VerticalAlignment="Top" Style="{StaticResource button_CK}" Width="96" Height="28" Click="btnTaiAnhBS_Click"/>
+
+
+                    <GroupBox FontWeight="SemiBold" Header="Tìm thông tin" Margin="628,28,10,22"/>
+                    <Rectangle HorizontalAlignment="Left" Height="140" Margin="326,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock FontWeight="SemiBold" HorizontalAlignment="Left" Margin="642,74,0,0" TextWrapping="Wrap" Text="Tìm kiếm theo : " VerticalAlignment="Top"/>
+                    <TextBlock  FontWeight="SemiBold" HorizontalAlignment="Left" Margin="642,141,0,0" TextWrapping="Wrap" Text="Nhập từ khóa : " VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtTimKiem" HorizontalAlignment="Left" Margin="642,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+                    <ComboBox FontWeight="SemiBold" x:Name="cbbTimKiemBS" HorizontalAlignment="Left" Margin="642,102,0,0" VerticalAlignment="Top" Width="150"/>
+                    <Button x:Name="btnTimKiem" Content="Tìm kiếm" HorizontalAlignment="Left" Margin="639,227,0,0" VerticalAlignment="Top" Style="{StaticResource button_CK}" Click="btnTimKiem_Click" Width="75"/>
+                    <Button x:Name="btnReLoad" Content="Tải Lại" HorizontalAlignment="Left" Margin="732,227,0,0" VerticalAlignment="Top" Style="{StaticResource button_CK}" Width="75" Click="btnReLoad_Click"/>
+
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="2" Background="#eff2f7">
+                <DataGrid x:Name="dtgBacSi" SelectionChanged="dtgBacSi_SelectionChanged"
+         Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" 
+   RowStyle="{DynamicResource DataGridRowStyle1}" >
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Mã BS" IsReadOnly="True" Width="*" Binding="{Binding MaBS}"/>
+                        <DataGridTextColumn Header="Tên BS" IsReadOnly="True" Width="*" Binding="{Binding TenBS}"/>
+                        <DataGridTextColumn Header="Giới Tính" IsReadOnly="True" Width="*" Binding="{Binding GioiTinh}"/>
+                        <DataGridTextColumn Header="Số Điện Thoại" IsReadOnly="True" Width="*" Binding="{Binding SDT}"/>
+                        <DataGridTextColumn Header="Chuyên Khoa" IsReadOnly="True" Width="*" Binding="{Binding ChuyenKhoa}"/>
+                        <DataGridTextColumn Header="Kinh Nghiệm" IsReadOnly="True" Width="*" Binding="{Binding KinhNghiem}"/>
+
+
+
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</UserControl>
